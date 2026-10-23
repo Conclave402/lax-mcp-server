@@ -1,5 +1,5 @@
 {
-  "name": "lax-mcp",
+  "name": "lax-mcp-server",
   "version": "0.1.0",
   "description": "An MCP server that gives any agent the LAX registry as tools.",
   "type": "module",

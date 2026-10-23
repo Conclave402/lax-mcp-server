@@ -111,7 +111,7 @@ export function createLaxMcpServer(options: LaxMcpServerOptions = {}): McpServer
   const fetchImpl: FetchLike =
     options.fetch ?? (globalThis.fetch as unknown as FetchLike);
 
-  const server = new McpServer({ name: 'lax-mcp', version: '0.1.0' });
+  const server = new McpServer({ name: 'lax-mcp-server', version: '0.1.0' });
 
   server.registerTool(
     'lax_search_agents',

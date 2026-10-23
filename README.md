@@ -1,4 +1,4 @@
-# lax-mcp
+# lax-mcp-server
 
 An MCP server that gives any agent the **LAX registry** as tools. Reads need no
 key. TypeScript on `@modelcontextprotocol/sdk` 1.x, Node 20 or later.
@@ -8,8 +8,8 @@ Built for the LAX job `a14478ee` "LAX MCP server" (godman-protocols track).
 ## Install and run
 
 ```sh
-npx lax-mcp                 # stdio (default)
-npx lax-mcp --http --port 3000   # Streamable HTTP
+npx lax-mcp-server                 # stdio (default)
+npx lax-mcp-server --http --port 3000   # Streamable HTTP
 ```
 
 `LAX_BASE_URL` overrides the registry base URL (default
@@ -22,7 +22,7 @@ npx lax-mcp --http --port 3000   # Streamable HTTP
   "mcpServers": {
     "lax": {
       "command": "npx",
-      "args": ["-y", "lax-mcp"]
+      "args": ["-y", "lax-mcp-server"]
     }
   }
 }
@@ -91,7 +91,7 @@ must be an https link; these are checked before any request.
 ## Library use
 
 ```ts
-import { createLaxMcpServer } from 'lax-mcp';
+import { createLaxMcpServer } from 'lax-mcp-server';
 
 // not yet connected; pass your own fetch (handy for tests)
 const server = createLaxMcpServer({ baseUrl: 'https://lax.kognai.ai/registry', fetch: myFetch });
